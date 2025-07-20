@@ -1,0 +1,228 @@
+﻿Bem vindo a Base thunder Rj Criada por #Foxin
+
+#Foxin
+#Foxin
+#Foxin
+
+#LEIA COM ATENÇÃO !!!!
+
+1 - server.cfg configure sua key caso não tenha uma site https://keymaster.fivem.net/
+
+2 - abri as portas pasta C:\Desktop\thunderRJ-Group\Extras Abrir_portas.rar execute o arquivo.
+
+3 - verifique se você tem XAMP caso não tenha versão que uso xampp-8-2-4.exe https://xampp.en.uptodown.com/windows/post-download/114878522
+
+4 - Verifique se você tem HeidiSQL caso não tenha https://www.heidisql.com/installers/HeidiSQL_12.7.0.6850_Setup.exe
+
+5 - Carregue os arquivos C:\xampp\htdocs para aparecer as imagens da base
+
+6 - carregue os arquivos sql \thunderRJ-Group\HeidiSQL thunder26.05.sql carregue no seu HeidiSQL
+
+7 - entranho na Base setar poder de DONO /controlebase 1 owner
+
+
+Comandos da base 
+
+👑 **CRIAR / GARAGEM** 👑 
+
+/criargaragem <- *cria a garagem no local que vc digitou o comando*
+/debuggarage <- *para saber o id da garagem para excluir*
+/deletegarage id  <- *comando para apagar a garagem*
+
+
+/creathouse cria casa
+/casas carrega a lista
+-----------------------------------
+
+<a:BLUE_FIRE:1169255624811495576>**PORTE DE ARMAS**<a:BLUE_FIRE:1169255624811495576> 
+
+/verporte <- para ver se a pessoa tem porte de armas!
+/porte <- 
+/darporte <- para entregar o porte de armas precisa de um item
+/remporte <- remover o porte de armas
+
+-----------------------------------
+
+<a:alerta1:1121131764857974905>**PARA LIMPAR PROP BUGADO**<a:alerta1:1121131764857974905> 
+
+/clearallobj <- *limpa tablet qualquer prop que fica na mao ou no chao bugado*
+/clearallveh   limpa veiculos da cidade
+/dvall (10)  <- *metros que vai apagar os veiculos!*
+
+
+-----------------------------------
+
+<a:ParaguaiFodeTrepa:1144061944161108019>**COMANDOS QUE OWNER POSSUI**<a:ParaguaiFodeTrepa:1144061944161108019> 
+
+/godarea (10) <- *metros que o raio de pessoas a receber god*
+/e3 <- *faz qualquer pessoa fazer animaçao*
+/kill 
+/addporta <- *para adicionar trancas*
+/debugporta <- *saber o id e as perm da tranca*
+/unban id motivo
+/hban id motivo
+
+/createchest  <- *PARA CRIAR BAUS EXTREMAMENTE PROIBIDO ESQUECER OS NOMES DOS BAUS POR FAVOR FAZER ANOTAÇAO COM CDS NA ABA DE BAUS COM NOME QUE CRIOU*
+/deletechest <-para deletar os baus
+
+
+🚀**ADD EM GROUPS**🚀 
+
+/groupadd id group <- *adicionar uma pessoa a um group* 
+**ex:** *admin*, *moderador,*  *suporte*
+/grouprem id group <- para remover uma pessoa de um group
+
+/orgadm GROUP
+
+
+COMADOS STAFF
+<@&1190784853629734943> <@&1190784858704838678> <@&1190784871430357022> <@&1190784876186710016> 
+
+**COMANDOS STAFF - IN GAME:**
+**/dv** - Deleta Veiculo.
+**/dvall** DISTÂNCIA - Delete veículos no raio de distância selecionado. (Somente developer)
+**/fix** - Reparar Veiculo.
+**/limparea** - Excluir objetos quebrados.
+**/god** - Encher a vida.
+**/rg2** - Pega a identidade
+**/wladd id** - Liberar a whitelist.
+**/wlrem**- Remover a whitelist.
+**/kick id** - Expulsar jogador.
+**/hban** - Banir jogador.
+**/unban** - Desbanir jogador.
+**/tempban** Dar banimento por tempo para punir.
+**/nc** - Noclip.
+ **/cuff** desalgemar.
+**/cds** - Pegar coordenadas.
+**/tpcds** - Teleporte para a coordenada.
+**/groupadd id** - Adicionar membro em coorporação. { SOMENTE MOD }
+**/grouprem** - Remover membro da coorporação.
+**/tpto** - Teleporte para um player.
+**/tptome** - Teleporte um jogador para você .
+**/tpway** - Teleporte para a marcação no mapa
+**/pon** - Quantidade de players no servidor.
+**/dm** - mensagem privada para o id player.
+**/adm** - Aviso no servidor para todos. 
+**/rename** - Troca o nome/idade do jogador. {SOMENTE ADM}
+**/staff**- Sai e entra em serviço.
+**/fuel** - comando para encher o combustivel, acesso adm, paramedicos e mecanicos
+
+**MENSAGENS PARA TODOS OS PLAYERS**
+**/adm2** { SOMENTE ADMINISTRADOR }
+**/mecanuncio** { SOMENTE MECANICOS}
+**/hpanuncio** { SOMENTE MEDICOS}
+
+
+
+**ADM = OWNER**
+**/uservehs** ID - Exibe os veículos que alguém possui.
+**/vroupas** - Mostra os números da roupa que você está vestindo
+**/clearinv ID** - Limpa todos os itens do inventário de alguém
+**/hash** - Mostra a Hash do veículo próximo.
+**/debug** - Exibe dados analíticos e informações mais precisas de objetos ou locais.
+**/resetchar id** - Reseta o personagem de alguém.
+**/debugsafe** - ver SafeZONE Somente developer
+**/car** - Spawna um veículo
+**/addcar id** - dar veiculo ao player
+**/clearallveh** remover todos os veiculos
+**/clearallobj** remover todos os objetos
+
+
+<a:fogo_rosa:848588295620788236>**SPAWM DE ARMAS**<a:fogo_rosa:848588295620788236>
+
+
+SPAWN DE ARMAS
+
+ARMAS:
+item WEAPON_PISTOL_MK2 | Five-Seven 1 
+item WEAPON_SNSPISTOL_MK2 | Fajuta 1
+item WEAPON_COMBATPISTOL | Glock 1
+item WEAPON_MACHINEPISTOL | Tec-9 1
+item WEAPON_SMG | SMG 1
+item WEAPON_ASSAULTRIFLE | AK-47 1
+item WEAPON_ASSAULTRIFLE_MK2 | AK-47 MK2 1 
+item WEAPON_SPECIALCARBINE_MK2 | G3 MK2 1
+item WEAPON_STUNGUN | Taser 1
+item WEAPON_BAT | Taco de Beisebol 1
+item WEAPON_KNIFE | Faca 1
+item WEAPON_SWITCHBLADE | Canivete 1
+item WEAPON_HAMMER | Martelo 1
+item WEAPON_AXE | Machado 1
+item WEAPON_MACHETE | Facão 1
+item WEAPON_KNUCKLE | Soco Inglês 1
+
+MUNIÇÕES:
+item AMMO_PISTOL_MK2 | Munição de Five-Seven 1
+item AMMO_SNSPISTOL_MK2 | Munição de Fajuta 1
+item AMMO_COMBATPISTOL | Munição de Glock 1
+item AMMO_MACHINEPISTOL | Munição de Tec-9 1
+item AMMO_SMG | Munição de SMG 1
+item AMMO_ASSAULTRIFLE | Munição de AK-47 1
+item AMMO_ASSAULTRIFLE_MK2 | Munição de AK-47 MK2 1 
+item AMMO_SPECIALCARBINE_MK2 | Munição de G3 MK2 1
+
+
+**Skins peds thunder**
+
+**Exemplo: /skin id nome**
+
+
+**Voltar para personagem masculino: skin id mp_m_freemode_01**
+
+**Voltar para personagem feminino: skin id mp_f_freemode_01**
+
+**kids**
+
+``` GirlBooster
+jessica
+majuzinha
+KidKolt
+jubyleu
+Ananda
+Zack2
+LS_Maimai
+dudinha```
+
+**Adultos**
+
+``` queijinho
+ig_datena
+TeenDuda
+ig_indio
+gaab
+paola
+ig_henry
+ig_gigante
+caioba
+ig_mineiro
+ig_thimagro
+ig_thimagro2
+caioanao
+LUCI_LuisAnao
+Scooby
+LEOGULLO
+ig_tmaia
+ig_geraldo
+ig_gagao
+gaab
+ig_guuh
+ig_freddie
+ig_fejao
+JujuHysiz
+ig_tiaveia
+Smeagol
+pedtia
+nam
+ANGEL_Blue```
+
+**Palhaço**
+
+```Fumaca
+Luq
+Nesquik```
+
+**Animais Apenas Permisão de DIR**
+
+``` sphynx
+corgi```
+
