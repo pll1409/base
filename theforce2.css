@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Sora', sans-serif;
+
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#posto{
+    position: absolute;
+    top: 50%;
+    left: 2vh;
+    transform: translate(0%,-50%);
+    width: 41.6497vh;
+    flex-shrink: 0;
+    padding-bottom: 20px;
+    border-radius: .8585vh;
+    border: 0.2778vh solid #f30202;
+    background: #0E0E0E;
+}
+
+#frontman{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 2vh;
+    transform: translate(0%,-50%);
+    width: 41.6497vh;
+    padding-top: 50px;
+    flex-shrink: 0;
+    padding-bottom: 20px;
+    border-radius: .8585vh;
+    border: 0.2778vh solid #f30202;
+    background: #0E0E0E;
+}
+
+#posto-header img{
+    margin-top: -40px;
+    width: 38.9102vh;
+}
+
+.posto-input div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0.463vh;
+    width: 33.9102vh;
+    height: 4.8123vh;
+    flex-shrink: 0;
+    border-radius: 0.3357vh;
+    border: 0.1852vh solid #272727;
+    background: linear-gradient(90deg, #272727 0.09%, rgba(39, 39, 39, 0.54) 100.03%);
+}
+
+.posto-input label{
+    color: rgba(255, 255, 255, 0.40);
+    font-size: 1.6843vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.input h1{
+    color: #f30202;
+    margin-right: 0.463vh;
+    font-size: 1.9207vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.input h2{
+    color: #FFF;
+    margin-right: 0.463vh;
+    font-size: 1.9207vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.input .visor1{
+    color: #FFF;
+    margin-right: 0.463vh;
+    font-size: 1.9207vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.input .visor2{
+    color: #FFF;
+    margin-right: 0.463vh;
+    font-size: 1.9207vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.input2 h1{
+    color: #f30202;
+    margin-right: 0.463vh;
+    font-size: 1.9207vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.input2 h2{
+    color: #FFF;
+    margin-right: 0.463vh;
+    font-size: 1.9207vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.progress {
+    width: 34.9102vh;
+    height: 2.9444vh;
+    background-color:#272727;
+    border-radius: 0.463vh;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    background: #f30202;
+    border-radius: 0.463vh;
+    font-size: 15px !important;
+
+}
+
+.abastecer{
+    display: flex;
+    width: 102%;
+    height: 3.5185vh;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #272727;
+    text-align: center;
+    font-family: Sora;
+    font-size: 1.7087vh;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: -0.0683vh;
+    cursor: pointer;
+    flex-shrink: 0;
+    border-radius: 0.5695vh;
+    border: 0.0949vh solid #ff0000;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.32) 0%, rgba(255, 0, 0, 0.96) 33.33%, rgba(255, 0, 0, 0.94) 66.68%, rgba(255, 0, 0, 0.13) 100%);
+}
+
+.button-refuel{
+    display: flex;
+    width: 16.5741vh;
+    height: 3.5185vh;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #272727;
+    text-align: center;
+    font-family: Sora;
+    font-size: 1.7087vh;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: -0.0683vh;
+    cursor: pointer;
+    flex-shrink: 0;
+    border-radius: 0.5695vh;
+    border: 0.0949vh solid #ff0000;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.32) 0%, rgba(255, 0, 0, 0.96) 33.33%, rgba(255, 0, 0, 0.94) 66.68%, rgba(255, 0, 0, 0.13) 100%);
+}
+
+.button-complete{
+    display: flex;
+    width: 16.5741vh;
+    height: 3.5185vh;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #ffffff;
+    text-align: center;
+    font-family: Sora;
+    font-size: 1.7087vh;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: -0.0683vh;
+    cursor: pointer;
+    flex-shrink: 0;
+    border-radius: 0.5695vh;
+    border: 1.025px solid #272727;
+    background: linear-gradient(90deg, rgba(39, 39, 39, 0.32) 0%, rgba(39, 39, 39, 0.96) 33.33%, rgba(39, 39, 39, 0.97) 60.73%, rgba(39, 39, 39, 0.97) 66.67%, rgba(39, 39, 39, 0.13) 100%);
+}
+
+
+.stopFuel{
+    display: flex;
+    width: 16.5741vh;
+    height: 3.5185vh;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #ffffff;
+    text-align: center;
+    font-family: Sora;
+    font-size: 1.7087vh;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: -0.0683vh;
+    cursor: pointer;
+    flex-shrink: 0;
+    border-radius: 0.5695vh;
+    border: 1.025px solid #272727;
+    background: linear-gradient(90deg, rgba(39, 39, 39, 0.32) 0%, rgba(39, 39, 39, 0.96) 33.33%, rgba(39, 39, 39, 0.97) 60.73%, rgba(39, 39, 39, 0.97) 66.67%, rgba(39, 39, 39, 0.13) 100%);
+}
+
+#posto-buttons{
+    width: 85%;
+    gap: 0.9259vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+#posto-buttons5{
+    width: 85%;
+    gap: 0.9259vh;
+    display: flex;
+}
+
+#posto-interactions{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    align-items: center;
+    gap: 1.4815vh;
+}
+
+#posto-interactions2{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    align-items: center;
+    gap: 1.4815vh;
+}
+.button-galao svg{
+    margin-left: -5px;
+    width: 2.7778vh !important;
+}
+.button-galao{
+    cursor: pointer;
+    display: block;
+    margin-top: 0.9259vh;
+    margin-left: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5.463vh;
+    height: 5.463vh;
+    flex-shrink: 0;
+    border-radius: 0vh 0.3704vh 0.3704vh 0vh;
+    background: #f30202;
+}
+
+.galao{
+    margin-top: 10px;
+    cursor: pointer;
+    display: block;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+    width: 93%;
+    height: 5.463vh;
+    flex-shrink: 0;
+    color: #272727;
+    text-align: center;
+    font-family: Sora;
+    font-size: 1.7087vh;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: -0.0683vh;
+    cursor: pointer;
+    flex-shrink: 0;
+    border-radius: 0.5695vh;
+    border: 0.0949vh solid #ff0000;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.32) 0%, rgba(255, 0, 0, 0.96) 33.33%, rgba(255, 0, 0, 0.94) 66.68%, rgba(255, 0, 0, 0.13) 100%);
+}
+
+
+#posto-interations2 img{
+    margin-top: 40px !important;
+    margin-bottom: 10px;
+}
+
+input{
+    background-color: none !important;
+    background: none !important;
+    outline: none;
+    border: none;
+    color: #FFF;
+    margin-right: 0.463vh;
+    font-size: 1.9207vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#posto-buttons2{
+    padding-top: 0.9259vh;
+    width: 95%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.bar{
+    text-align: center;
+    color: #010101;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+.frontman{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

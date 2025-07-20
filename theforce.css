@@ -1,0 +1,470 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'bahnschrift', sans-serif;
+
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+
+    cursor:pointer;
+
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    background: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.v-text {
+    top: 512px;
+    left: 750px;
+}
+
+.insert-value {
+    position: absolute;
+    width: 210px;
+    height: 16px;
+    top: 512px;
+    left: 750px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #848484; 
+}
+
+.input-value {
+    position: absolute;
+    width: 271px;
+    height: 20px;
+    top: 535px;
+    left: 749px;
+    background: rgba(196, 196, 196, 0.2);
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    border: none;
+    font-size: 25px;
+    padding-top: 0px;
+    color:#8f0e0e;
+    resize: none;
+    outline: none;
+}
+
+.vinput {
+    position: absolute;
+    width: 248px;
+    height: 35px;
+    top: 535px;
+    left: 749px;
+    padding-left: 20px;
+    background: rgba(196, 196, 196, 0.2);
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    font-size: 25px;
+    color:#e2e2e2;
+    outline: none;
+    border: none;
+}
+
+.input-value {
+    position: absolute;
+    width: 271px;
+    height: 37px;
+    top: 535px;
+    left: 749px;
+    background: rgba(196, 196, 196, 0.2);
+    border-radius: 5px;
+}
+
+.insert-value {
+    position: absolute;
+    width: 77px;
+    height: 16px;
+    top: 512px;
+    left: 750px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #848484;
+}
+
+.fuel-img {
+    position: absolute;
+    width: 260px;
+    height: 250px;
+    top: 310px;
+    left: 675px;
+    transform: scale(0.6);
+    background-image: url("images/fuel.png");
+}
+
+.fuel-p {
+    position: absolute;
+    width: 49px;
+    height: 30px;
+    top: 435px;
+    left: 940px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    color: #da2c2c;
+}
+
+.fuel-circle-p {
+    position: absolute;
+    width: 54px;
+    height: 16px;
+    top: 378px;
+    left: 936px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7A7A7A;
+}
+
+.fuel-circle {
+    position: absolute;
+    width: 99px;
+    height: 97px;
+    top: 401px;
+    left: 913px;
+    background: rgba(196, 196, 196, 0.2);
+    border-radius: 50px;
+}
+
+.front-header {
+    position: absolute;
+    width: 398px;
+    height: 50px;
+
+    background: #2C3137;
+    border-radius: 5px;
+    top: 292px;
+    left: 686px;
+}
+
+.front-header-p {
+    position: absolute;
+    width: 40px;
+    height: 16px;
+    top: 309px;
+    left: 866px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #7A7A7A;
+}
+
+.front-body {
+    position: absolute;
+    width: 398px;
+    height: 358px;
+
+    background: #353A40;
+    border-radius: 5px;
+    top: 305px;
+    left: 686px;
+}
+
+#posto {
+    position: absolute;
+    width: 835px;
+    height: 531px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.35);
+    display: none;
+}
+
+#frontman {
+    position: absolute;
+    left: -370px;
+    top: -180px;
+    transform: scale(1.5);
+}
+
+#titulo {
+    position: absolute;
+    width: 815px;
+    height: 40px;
+    top: 10px;
+    left: 10px;
+}
+
+#nome {
+    position: absolute;
+    width: 815px;
+    height: 40px;
+    top: 0px;
+    left: 0px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#nome p {
+    position: absolute;
+    top: 6px;
+    left: 300px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.visor1 {
+
+    position: absolute;
+    width: 249px;
+    height: 51px;
+    top: 120px;
+    left: 85px;
+    background-color:rgb(139, 139, 139);
+    border-radius: 5px;
+}
+
+.visor1 p {
+
+    position: absolute;
+    font-size: 40px;
+    left: 10px;
+    top: 5px;
+    color: rgba(0, 0, 0, 0.5);
+
+}
+
+
+.visor2 {
+
+    position: absolute;
+    width: 249px;
+    height: 51px;
+    top: 230px;
+    left: 85px;
+    background-color:rgb(139, 139, 139);
+    border-radius: 5px;
+}
+
+.visor2 p {
+
+    position: absolute;
+    font-size: 40px;
+    left: 10px;
+    top: 5px;
+    color: rgba(0, 0, 0, 0.5);
+
+}
+
+.progress {
+
+    position: absolute;
+    width: 249px;
+    height: 21px;
+    top: 350px;
+    left: 85px;
+    background-color:rgb(0, 0, 0, 0.6);
+    border-radius: 5px;
+
+}
+
+.bar {
+    position: absolute;
+    width: 249px;
+    height: 19px;
+    top: 351px;
+    left: 85px;
+    background-color:rgb(236, 96, 31);
+    background: rgb(253,60,28);
+    background: linear-gradient(90deg, rgba(253,60,28,0.8802871490393032) 0%, rgba(254,112,88,0.9475140397956058) 100%);
+    border-radius: 5px;
+
+}
+
+.icone {
+
+    position: absolute;
+    right: 160px;
+    top: 200px;
+}
+
+.icone2 {
+
+    transform: scale(0.12); 
+    position: absolute;
+    right: 500px;
+    top: 65px;
+}
+
+.slot{
+    position: absolute;
+    width: 400px;
+    height: 460px;
+    top: 60px;
+    left: 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slot p{
+
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    color: white;
+}
+
+.slot2{
+
+    position: absolute;
+    width: 400px;
+    height: 460px;
+    top: 60px;
+    left: 425px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.litros p{
+
+    position: absolute;
+    top: 200px;
+    left: 60px;
+    color: white;
+}
+
+.price {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    top: 110px;
+    right: 140px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(100, 209, 123);
+    font-size: 30px;
+
+    -webkit-transition: background-color 0.2s linear;
+    -ms-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+}
+
+.unique {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.galao {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    bottom: 80px;
+    right: 140px;
+    border-radius: 5px;
+    background-color: rgb(209, 100, 100);
+    color: rgb(51, 51, 51);
+
+    -webkit-transition: background-color 0.2s linear;
+    -ms-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+}
+
+.galao p {
+    position: absolute;
+    top: 9px;
+    left: 15px;
+    font-size: 18px;
+}
+
+.galao:hover {
+    background-color: rgb(206, 86, 86);
+    color: rgb(51, 51, 51);
+    opacity: 90%;
+}
+
+.abastecer {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    bottom: 80px;
+    left: 130px;
+    border-radius: 5px;
+    background-color: rgb(209, 100, 100);
+    color: rgb(51, 51, 51);
+
+    -webkit-transition: background-color 0.2s linear;
+    -ms-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+}
+
+.abastecer p {
+    position: absolute;
+    top: 9px;
+    left: 30px;
+    font-size: 18px;
+}
+
+.abastecer:hover {
+    background-color: rgb(206, 86, 86);
+    color: rgb(51, 51, 51);
+    opacity: 90%;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 1px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+}
+

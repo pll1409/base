@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>zFuel</title>
+    <link href='theforce2.css' rel='stylesheet' type='text/css'>
+    <!-- <script src='nui://game/ui/jquery.js' type='text/javascript'></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="lightsaber.css" type="text/css">
+</head>
+<body>
+    <div id='container'>
+        <div id='posto' style='display: none;'>
+            <div id="button-galao" class="button-galao">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="30" viewBox="0 0 32 30" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.31546 1.22279L0.0344341 2.44093L0.0171858 3.3886L0 4.33628L0.204667 4.25368C0.317281 4.20831 1.20388 3.83753 2.17497 3.42988L3.94048 2.68862L5.05543 3.73691L6.17032 4.78527L5.71149 5.23847C5.45914 5.48772 5.25266 5.71788 5.25266 5.74993C5.25266 5.78199 5.72330 6.26254 6.29856 6.81787L7.34439 7.82748L6.70477 8.44631L6.06508 9.06508V19.5325V30H19.0325H32V18.2049V6.40973L29.8263 4.31718L27.6526 2.22463H20.4062H13.1599L12.3621 2.99204L11.5643 3.7595L10.517 2.75104C9.94095 2.19643 9.44243 1.74263 9.40919 1.74263C9.37594 1.74263 9.13721 1.94386 8.87868 2.18974L8.4086 2.63692L6.5361 1.31612C5.50626 0.589738 4.64854 -0.00258229 4.63004 8.46659e-06C4.6116 0.00253898 3.57002 0.552744 2.31546 1.22279ZM26.0006 5.70444V7.5869H27.9067C28.955 7.5869 29.8127 7.56642 29.8127 7.54135C29.8127 7.51629 28.955 6.66917 27.9067 5.65889L26.0006 3.82198V5.70444ZM16.2516 5.44802V6.2614H19.0325H21.8135V5.44802V4.63464H19.0325H16.2516V5.44802ZM12.4542 12.0613C12.068 12.4347 11.752 12.7672 11.752 12.8002C11.752 12.8332 12.216 13.3069 12.7832 13.8529L13.8143 14.8457V18.1909V21.5362L12.7832 22.529C12.216 23.075 11.752 23.5496 11.752 23.5836C11.752 23.6177 12.0688 23.9501 12.4559 24.3223L13.1599 24.999L14.0957 24.0954L15.0314 23.1917H19.0013H22.9712L23.907 24.0954L24.8427 24.999L25.5781 24.292L26.3134 23.5849L25.2509 22.5593L24.1883 21.5336V18.1909V14.8483L25.2509 13.8226L26.3134 12.797L25.5781 12.0899L24.8427 11.3829L23.907 12.2865L22.9712 13.1902H19.0028H15.0344L14.0954 12.2863L13.1564 11.3824L12.4542 12.0613ZM15.8766 18.1909V21.2035H19.0013H22.126V18.1909V15.1784H19.0013H15.8766V18.1909Z" fill="#0E0E0E"/>
+                </svg>
+            </div>
+            <div id="posto-header">
+                <img src="images/header.svg" alt="">
+            </div>
+            <div id="posto-interactions">
+                <div class="posto-input">
+                    <label for="">Valor a Pagar</label>
+                    <div class="input">
+                        <h1>R$</h1>
+                        <div style="background-color: none !important; background: none !important; border: none !important;" class="visor1">0</div>
+                    </div>
+                </div>
+                <div class="posto-input">
+                    <label for="">Valor por Litro</label>
+                    <div class="input">
+                        <h1>R$</h1>
+                        <h2>5.00</h2>
+                    </div>
+                </div>
+                <div class="posto-input">
+                    <label for="">Quantidade de Litro</label>
+                    <div class="input">
+                        <div style="width: auto;background-color: none !important; background: none !important; border: none !important;" class="visor2">0.00</div>
+                        <h1>L</h1>
+                    </div>
+                </div>
+                <div class="progresbar-posto">
+                    <div class='progress'>
+                        <div class='bar'></div>
+                    </div>
+                </div>
+                <div id="posto-buttons">
+                    <div class='abastecer'><p>Abastecer</p></div>
+                </div>
+            </div>
+            <div style="display: none;" class="iteration2" id="posto-interactions2">
+                <img width="85%" src="images/galao.png" alt="">
+                <div id="posto-buttons2">
+                    <div class="posto-input">
+                        <label for="">Valor a Pagar</label>
+                        <div class="input2">
+                            <h1>R$</h1>
+                            <h2 class="price"></h2>
+                        </div>
+                    </div>
+                    <div class='galao'><p>COMPRAR GALÃO</p></div>
+                </div>
+            </div>
+        </div>
+        <div id='frontman' class="frontman" style="display: none;">
+            <div id="posto-header">
+                <img src="images/header.svg" alt="">
+            </div>
+            <div class="posto-input">
+                <label for="">Seu Tanque esta em:</label>
+            </div>
+            <div class='progress'>
+                <div class='bar'>60%</div>
+            </div>
+            <div class="posto-input">
+                <label for="">Valor a Pagar</label>
+                <div class="input">
+                    <h1>R$</h1>
+                    <input type="number" spellcheck="false" class="vinput">
+                </div>
+            </div>
+            <div id="posto-buttons5">
+                <div class='button-refuel'><p>Abastecer</p></div>
+                <div class='button-complete'><p>Completar</p></div>
+            </div>
+        </div>
+    </div>
+    <script src='lightsaber.js' type='text/javascript'></script>
+    <script>
+        var aba = 0;
+        var iteration2 = document.querySelector(".iteration2");
+        var iteration = document.getElementById("posto-interactions");
+        var galaoButton = document.querySelector('.button-galao');
+    
+        galaoButton.addEventListener('click', function(){
+            if (aba == 0){
+                aba = 1;
+                iteration2.style.display = 'flex';
+                iteration.style.display = 'none';
+            } 
+            else if (aba == 1){
+                aba = 0;
+                iteration2.style.display = 'none';
+                iteration.style.display = 'flex';
+            }
+        });
+    </script>
+    
+</body>
+</html>

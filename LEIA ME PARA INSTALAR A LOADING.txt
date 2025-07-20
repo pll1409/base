@@ -1,0 +1,21 @@
+## CREDITOS AO FOXZIN ##
+## DUVIDAS DISCORD.GG/FOXZINCOMMUNITY ##
+
+
+1 primeiro coloque seu video em formato ".webm" nesse site caso precise converter
+
+site: https://www.freeconvert.com/pt/mp4-to-webm/download
+site : https://convertio.co/pt/mp4-webm/
+
+2 Verifique o nome do video em video.js na linha 11 exemplo  video.src = "nui://vrp/loading/foxzin.webm"; // Novo formato
+tem que ser o mesmo nome que no seu video que vc vai colocar na vrp/loading/foxzin.webm
+
+3 verifica em vrp. fxmanifest.lua  o nome condiz em fies 	"loading/foxzin.webm", sendo assim pode proceder com o script
+
+
+Duvidas funciona em outros formatos sim pode usar como link exemplo video.src = "https://www.w3schools.com/html/mov_bbb.webm";
+
+mp4 tambem funciona porem o video buga nos 30s por se tratar do formato  
+qualquer duvida ? 4. Verifique os logs do FiveM (F8)
+?? Erro ao carregar o vídeo. Verifique o caminho: nui://vrp/loading/foxzin.webm
+
