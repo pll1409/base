@@ -1,135 +1,122 @@
-local Tunnel = module('vrp','lib/Tunnel')
-local Proxy = module('vrp','lib/Proxy')
-vRP = Proxy.getInterface('vRP')
+announces = {
+    ['ilegal'] = {},
+    ['legal'] = {}
+}
 
-src = {}
-Tunnel.bindInterface('zFuel',src)
-vCLIENT = Tunnel.getInterface('zFuel')
+open = {}
 
-local peds = {}
-local attList = {}
-
-function src.returnMoney()
-	local source = source
-	return Config.money(source)
+formatAnnounce = function(data)
+    local table = {}
+    for k,v in pairs(data) do
+        if not v.deleted then
+            table[#table+1] = v
+        end
+    end
+    return table
 end
 
-function src.checkPayment(amount)
-	local source = source
-	return Config.payment(source, amount)
+RegisterTunnel.getInfos = function()
+    local source = source
+    local user_id = vRP.getUserId(source)
+    if user_id then
+        local org = ''
+        local myAnnounces = {}
+        for k,v in pairs(Config.Orgs) do
+            if vRP.hasPermission(user_id, v.permission) then
+                org = k
+                open[user_id] = k
+                if announces[v.type] then
+                    for i = 1,#announces[v.type] do
+                        if announces[v.type][i] and announces[v.type][i].org == org and not announces[v.type][i].deleted then
+                            myAnnounces[#myAnnounces+1] = { desc = announces[v.type][i].desc, loc = announces[v.type][i].loc, id = announces[v.type][i].id }
+                        end
+                    end
+                end
+            end
+        end
+        return myAnnounces, org, (org ~= ''), formatAnnounce(announces['ilegal']), formatAnnounce(announces['legal'])
+    end
 end
 
-function src.syncMove(index,x,y,z)
-	TriggerClientEvent('pedMove', -1, index,x,y,z)
+RegisterTunnel.createAnnounce = function(data)
+    local source = source
+    local user_id = vRP.getUserId(source)
+    if user_id then
+        local identity = vRP.getUserIdentity(user_id)
+        if not Config.Orgs[data.org] then return end
+        local type = Config.Orgs[data.org].type
+        if announces[type] then
+            local table = announces[type]
+            for k,v in pairs(table) do
+                if v.org == data.org and not v.deleted then
+                    TriggerClientEvent('Notify', source, 'negado',"Sua organização já possui um anuncio ativo, exclua o atual para poder criar um novamente.", 5000)
+                    return false
+                end
+            end
+            local cds = Config.Orgs[data.org].cds
+            local request = vRP.request(source, 'Você deseja usar sua localização atual? ( caso não, será utilizado a localização da sua fac ou org )', 15)
+            if request then
+                local loc = GetEntityCoords(GetPlayerPed(source))
+                cds = vec3(loc.x, loc.y, loc.z)
+                TriggerClientEvent( "Notify", source, "sucesso", "Você enviou o anuncio do recrutamento com sucesso.", 5000 )
+            end
+            table[#table+1] = {
+                id = #table+1,
+                org = data.org,
+                desc = data.description,
+                author = identity.nome.." "..identity.sobrenome,
+                cds = cds,
+                loc = true,
+                deleted = false
+            }
+            vTunnel.createNotify(-1, {org = data.org, timing = Config.Timing})
+            return true
+        end
+    end
+    return false
 end
 
-function src.syncObject(index,x,y,z)
-	TriggerClientEvent('syncObject', -1, index,x,y,z)
+RegisterTunnel.deleteAnnounce = function(data)
+    local source = source
+    local user_id = vRP.getUserId(source)
+    if user_id then
+        if not open[user_id] then return false end
+        if not Config.Orgs[open[user_id]] then return end
+        local type = Config.Orgs[open[user_id]].type
+        if announces[type] then
+            if announces[type][data.announce.id] then
+                announces[type][data.announce.id].deleted = true
+                TriggerClientEvent( "Notify", source, "sucesso", "Você deletou o anuncio do recrutamento com sucesso.", 5000 )
+                 -- print("enviou aqui")
+            end
+            return true
+        end
+    end
+    return false
 end
 
-function src.syncDeleteObject(index)
-	TriggerClientEvent('syncDeleteObject', -1, index)
+RegisterTunnel.updateLoc = function(data)
+    local source = source
+    local user_id = vRP.getUserId(source)
+    if user_id then
+        if not open[user_id] then return false end
+        if not Config.Orgs[open[user_id]] then return end
+        local type = Config.Orgs[open[user_id]].type
+        if announces[type] then
+            for k,v in pairs(announces[type]) do
+                if v.org == open[user_id] and not v.deleted then
+                    if announces[type][v.id] then
+                        announces[type][v.id].loc = data.localization
+                    end
+                    return true
+                end
+            end
+
+        end
+    end
+    return false
 end
 
-function src.syncFuel(index, amount)
-	TriggerClientEvent('syncFuel', -1, index,amount)
-end
 
-function src.syncFace(index, target, time)
-	TriggerClientEvent('syncFace', -1, index,target,time)
-end
 
-function src.syncAnim(index, toggle, type)
-	TriggerClientEvent('syncAnim', -1, index,toggle,type)
-end
 
-function src.syncWhistle(index, target, time)
-	TriggerClientEvent('syncWhistle', -1, index, target, time)
-end
-
-function src.addList(ped)
-	local source = source
-	local user_id = vRP.getUserId(source)
-	attList[user_id] = ped
-end
-
-function src.removeList()
-	local source = source
-	local user_id = vRP.getUserId(source)
-	attList[user_id] = nil
-end
-
-function src.getService(ped)
-	return peds[ped].service
-end
-
-function src.setService(ped, toggle)
-	peds[ped].service = toggle
-	if not toggle then
-		peds[ped].unbug = 0
-	end
-end
-
-function src.getWhistle(ped)
-	return peds[ped].whistle
-end
-
-function src.isOnGarage()
-	if GetPlayerRoutingBucket(source) ~= 0 then
-		return true
-	else
-		return false
-	end
-end
-
-function src.setWhistle(ped, toggle)
-	peds[ped].whistle = toggle
-	peds[ped].wtime = Config.whistleCD
-end
-
-AddEventHandler('vRP:playerLeave',function(user_id,source)
-	if attList[user_id] ~= nil then
-		local id = attList[user_id]
-		peds[id].service = false
-		attList[user_id] = nil
-		TriggerClientEvent('pedReturn', -1, id,Config.pedlist[id].x,Config.pedlist[id].y,Config.pedlist[id].z)
-	end
-end)
-
-Citizen.CreateThread(function()
-	for k,v in pairs(Config.pedlist) do
-		table.insert(peds, {
-			id = k,
-			whistle = false,
-			wtime = 0, 
-			service = false,
-			unbug = 0
-		})
-	end
-end)
-
-Citizen.CreateThread(function()
-	while true do
-		for k,v in pairs(peds) do
-			if v.service then
-				v.unbug = v.unbug + 1
-				if v.unbug > 360 then
-					v.service = false
-					TriggerClientEvent('pedReturn', -1, v.id,Config.pedlist[v.id].x,Config.pedlist[v.id].y,Config.pedlist[v.id].z)
-					TriggerClientEvent('syncAnim', -1, v.id,false,'')
-				end
-			else
-				v.unbug = 0
-			end
-			if Config.whistle then
-				if v.wtime > 0 then
-					v.wtime = v.wtime - 1
-					if v.wtime == 0 then
-						v.whistle = false
-					end
-				end
-			end
-		end
-		Citizen.Wait(1000)
-	end
-end)

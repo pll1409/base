@@ -1,0 +1,1 @@
+{"blackout":false,"instanttime":true,"dynamic":false,"instantweather":true,"mins":29,"hours":13,"weather":"CLEAR","freeze":true}

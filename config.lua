@@ -1,264 +1,287 @@
-Config = {}
+Config = {
+	Timing = 30,
+	Orgs = {
+		-----------------------------EMPREGOS LEGAIS---------------------
+		-- ['Exercito'] = {
+		-- 	type = 'legal',  ----TYPE LEGAL\ILEGAL
+		-- 	cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+		-- 	permission = 'perm.recrutamentoexercito'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		-- },
+		-- ['Bope'] = {
+		-- 	type = 'legal',  ----TYPE LEGAL\ILEGAL
+		-- 	cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+		-- 	permission = 'perm.recrutamentobope'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		-- },
+		['thunderCustom'] = {
+			type = 'legal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(-735.98,-1458.83,5.0), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentomec'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Street Racing'] = {
+			type = 'legal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(821.32,-995.92,26.39), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentomec2'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['PoliciaPMERJ'] = {
+			type = 'legal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(-1633.97,182.08,61.81), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentopm'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['PoliciaFederal'] = {
+			type = 'legal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(-426.9,1120.87,325.86), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentofederal'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['PoliciaPRF'] = {
+			type = 'legal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(2903.91,4161.62,50.97), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentoprf'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['PoliciaCivil'] = {
+			type = 'legal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(-941.88,-2115.44,9.39), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentocivil'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Hospital'] = {
+			type = 'legal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(-2294.01,373.97,174.6), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.unizk'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Bombeiro'] = {
+			type = 'legal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1541.35,826.59,79.78), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentobombeiro'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Judiciario'] = {
+			type = 'legal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(-1668.21,-770.78,11.71), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentojudiciario'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
 
-Config.commandName = "servico" -- Alterar o comando (padrão é /servico).
+		----------------------------------------------------------------------------------------------------------------
 
-Config.permissionMessage = "Você não tem permissão para isso." -- Alterar mensagem de falta de permissão.
+       -----------------------------------EMPREGOS ILEGAIS-----------------------------------------------------------
+	   
+	   ---FACS
+		['Demonike'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentodemonike'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['PCC'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(-3115.43,1326.68,19.83), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentopcc'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Mafia'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentomafia'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Cartel'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1307.97,1098.26,105.65), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentocartel'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Croacia'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentocroacia'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Franca'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(-2531.8,1877.5,168.19), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentofranca'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['WOLVES'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(464.42,268.75,103.17), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentowolves'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['YAKUZA'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(-3381.46,966.15,8.37), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentoyakuza'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['TRIADE'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentotriade'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Merlim'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(244.67,1180.42,225.55), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentomerlim'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Merlim'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(244.67,1180.42,225.55), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentomerlim'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Grota'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1237.96,-282.73,74.04), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentogrota'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Turquia'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1287.6,-709.2,65.41), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.turquia'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['BLACKOUT'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentoblackout'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
 
-Config.noDistanceAreaMessage = "Você deve estar na área da sua organização para entrar ou sair de serviço!" -- Alterar mensagem de fora da área de cada org.
+-----------------------------------------------------------------------------------------------------------
+		['Milicia'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentomilicia'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Alemao'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentoalemao'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Helipa'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentohelipa'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Rocinha'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentorocinha'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['CRIPS'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(-1869.52,2029.55,138.93), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentocrips'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Furious'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentofurious'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},	
+		['MotoClub'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(963.2,-143.3,74.49), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentomotoclub'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['B13'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentob13'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Lacoste'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentolacoste'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['HellsAngels'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentohellsamgels'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		-- ['Bennys'] = {
+		-- 	type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+		-- 	cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+		-- 	permission = 'perm.recrutamentobennys'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		-- },
+-------------------------------------------------------------------------------------------------------------
 
-Config.organizations = {
-    PMERJ = {
-        enterMessage = "Você entrou em serviço!",
-        exitMessage = "Você saiu de serviço!",                         --METROS--
-        area = { centerX = -1641.87, centerY = 179.82, centerZ = 61.62, radius = 50 },  -- -1641.87,179.82,61.62 PMERJ
-        groups = {
-            ["ComandoPMERJ"] = "PComandoPMERJ",
-            ["CoronelPMERJ"] = "PCoronelPMERJ",
-            ["TenenteCoronelPMERJ"] = "PTenenteCoronelPMERJ",
-            ["MajorPMERJ"] = "PMajorPMERJ",
-            ["CapitaoPMERJ"] = "PCapitaoPMERJ",
-            ["PrimeiroTenentePMERJ"] = "PPrimeiroTenentePMERJ",
-            ["SegundoTenentePMERJ"] = "PSegundoTenentePMERJ",
-            ["SubTenentePMERJ"] = "PSubTenentePMERJ",
-            ["PrimeiroSargentoPMERJ"] = "PPrimeiroSargentoPMERJ",
-            ["SegundoSargentoPMERJ"] = "PSegundoSargentoPMERJ",
-            ["TerceiroSargentoPMERJ"] = "PTerceiroSargentoPMERJ",
-            ["CaboPMERJ"] = "PCaboPMERJ",
-            ["SoldadoPMERJ"] = "PSoldadoPMERJ",
-            ["AlunoPMERJ"] = "PAlunoPMERJ",
-            ["PComandoPMERJ"] = "ComandoPMERJ",
-            ["PCoronelPMERJ"] = "CoronelPMERJ",
-            ["PTenenteCoronelPMERJ"] = "TenenteCoronelPMERJ",
-            ["PMajorPMERJ"] = "MajorPMERJ",
-            ["PCapitaoPMERJ"] = "CapitaoPMERJ",
-            ["PPrimeiroTenentePMERJ"] = "PrimeiroTenentePMERJ",
-            ["PSegundoTenentePMERJ"] = "SegundoTenentePMERJ",
-            ["PSubTenentePMERJ"] = "SubTenentePMERJ",
-            ["PPrimeiroSargentoPMERJ"] = "PrimeiroSargentoPMERJ",
-            ["PSegundoSargentoPMERJ"] = "SegundoSargentoPMERJ",
-            ["PTerceiroSargentoPMERJ"] = "TerceiroSargentoPMERJ",
-            ["PCaboPMERJ"] = "CaboPMERJ",
-            ["PSoldadoPMERJ"] = "SoldadoPMERJ",
-            ["PAlunoPMERJ"] = "AlunoPMERJ"
-        },
-        webhook = "https://discord.com/api/webhooks/1263722776079106078/-uXx4IML2hRjCW70Idmkx0WwWvYOz7ks8eBKHdkTVJcY5Eb6_glUGZUHcd-tuOuEYda8"
-    },
-    Exercito = {
-        enterMessage = "Você entrou em serviço!",
-        exitMessage = "Você saiu de serviço!",
-        area = { centerX = -2174.38, centerY = 3186.66, centerZ = 32.81, radius = 50 }, -- -2174.38,3186.66,32.81  EXERCITO
-        groups = {
-            ["Coronel"] = "PCoronel",
-            ["TenenteCoronel"] = "PTenenteCoronel",
-            ["Major"] = "PMajor",
-            ["Capitao"] = "PCapitao",
-            ["PrimeiroTenente"] = "PPrimeiroTenente",
-            ["SegundoTenente"] = "PSegundoTenente",
-            ["SubTenente"] = "PSubTenente",
-            ["PrimeiroSargento"] = "PPrimeiroSargento",
-            ["SegundoSargento"] = "PSegundoSargento",
-            ["TerceiroSargento"] = "PTerceiroSargento",
-            ["Cabo"] = "PCabo",
-            ["Soldado"] = "PSoldado",
-            ["PCoronel"] = "Coronel",
-            ["PTenenteCoronel"] = "TenenteCoronel",
-            ["PMajor"] = "Major",
-            ["PCapitao"] = "Capitao",
-            ["PPrimeiroTenente"] = "PrimeiroTenente",
-            ["PSegundoTenente"] = "SegundoTenente",
-            ["PSubTenente"] = "SubTenente",
-            ["PPrimeiroSargento"] = "PrimeiroSargento",
-            ["PSegundoSargento"] = "SegundoSargento",
-            ["PTerceiroSargento"] = "TerceiroSargento",
-            ["PCabo"] = "Cabo",
-            ["PSoldado"] = "Soldado"
-        },
-        webhook = "https://discord.com/api/webhooks/WEBHOOK_ID_PMERJ"
-    },
-    BOPE = {
-        enterMessage = "Você entrou em serviço!",
-        exitMessage = "Você saiu de serviço!",
-        area = { centerX = 2515.36, centerY = -421.08, centerZ = 94.39, radius = 50 }, -- 2515.36,-421.08,94.39     BOPE
-        groups = {
-            ["CoronelBope"] = "PCoronelBope",
-            ["Ten.CoronelBope"] = "PTen.CoronelBope",
-            ["MajorBope"] = "PMajorBope",
-            ["CapitaoBope"] = "PCapitaoBope",
-            ["TenenteBope"] = "PTenenteBope",
-            ["SargentoBope"] = "PSargentoBope",
-            ["CaboBope"] = "PCaboBope",
-            ["SoldadoBope"] = "PSoldadoBope",
-            ["RecrutaBope"] = "PRecrutaBope",
-            ["PCoronelBope"] = "CoronelBope",
-            ["PTen.CoronelBope"] = "Ten.CoronelBope",
-            ["PMajorBope"] = "MajorBope",
-            ["PCapitaoBope"] = "CapitaoBope",
-            ["PTenenteBope"] = "TenenteBope",
-            ["PSargentoBope"] = "SargentoBope",
-            ["PCaboBope"] = "CaboBope",
-            ["PSoldadoBope"] = "SoldadoBope",
-            ["PRecrutaBope"] = "RecrutaBope"
-        },
-        webhook = "https://discord.com/api/webhooks/1263725306405982239/ltxyCWf09EmUib_75Bh5KdALjsdvZpFawXaQPxbRXPmUkSnSs1BE2nJH5oOkKRhE9hvf"
-    },
-    PF = {
-        enterMessage = "Você entrou em serviço!",
-        exitMessage = "Você saiu de serviço!",
-        area = { centerX = -429.65, centerY = 1108.65, centerZ = 327.8, radius = 50 },  -- -429.65,1108.65,327.8 POLICIA FEDERAL
-        groups = {
-            ["ComandoGeralPF"] = "PComandoGeralPF",
-            ["DelegadoPF"] = "PDelegadoPF",
-            ["DelegadoADJ.PF"] = "PDelegadoADJ.PF",
-            ["PeritoPF"] = "PPeritoPF",
-            ["EscrivaoPF"] = "PEscrivaoPF",
-            ["InspetorPF"] = "PInspetorPF",
-            ["Agente.Cl1"] = "PAgente.Cl1",
-            ["Agente.Cl2"] = "PAgente.Cl2",
-            ["Agente.Cl3"] = "PAgente.Cl3",
-            ["Agente.Cl4"] = "PAgente.Cl4",
-            ["Agente.Cl5"] = "PAgente.Cl5",
-            ["AlunoPF"] = "PAlunoPF",
-            ["PComandoGeralPF"] = "ComandoGeralPF",
-            ["PDelegadoPF"] = "DelegadoPF",
-            ["PDelegadoADJ.PF"] = "DelegadoADJ.PF",
-            ["PPeritoPF"] = "PeritoPF",
-            ["PEscrivaoPF"] = "EscrivaoPF",
-            ["PInspetorPF"] = "InspetorPF",
-            ["PAgente.Cl1"] = "Agente.Cl1",
-            ["PAgente.Cl2"] = "Agente.Cl2",
-            ["PAgente.Cl3"] = "Agente.Cl3",
-            ["PAgente.Cl4"] = "Agente.Cl4",
-            ["PAgente.Cl5"] = "Agente.Cl5",
-            ["PAlunoPF"] = "AlunoPF"
-        },
-        webhook = "https://discord.com/api/webhooks/WEBHOOK_ID_PMERJ"
-    },
-    PRF = {
-        enterMessage = "Você entrou em serviço!",
-        exitMessage = "Você saiu de serviço!",
-        area = { centerX = 2909.2, centerY = 4162.59, centerZ = 50.6, radius = 50 },  -- 2909.2,4162.59,50.6  PRF
-        groups = {
-            ["ComandoGeralPRF"] = "PComandoGeralPRF",
-            ["Sub.ComandoPRF"] = "PSub.ComandoPRF",
-            ["DiretorPRF"] = "PDiretorPRF",
-            ["InspetorPRF"] = "PInspetorPRF",
-            ["Agente.especialPRF"] = "PAgente.especialPRF",
-            ["Clase3.PRF"] = "PClase3.PRF",
-            ["Clase2.PRF"] = "PClase2.PRF",
-            ["Clase1.PRF"] = "PClase1.PRF",
-            ["PComandoGeralPRF"] = "ComandoGeralPRF",
-            ["PSub.ComandoPRF"] = "Sub.ComandoPRF",
-            ["PDiretorPRF"] = "DiretorPRF",
-            ["PInspetorPRF"] = "InspetorPRF",
-            ["PAgente.especialPRF"] = "Agente.especialPRF",
-            ["PClase3.PRF"] = "Clase3.PRF",
-            ["PClase2.PRF"] = "Clase2.PRF",
-            ["PClase1.PRF"] = "Clase1.PRF"
-        }, 
-         webhook = "https://discord.com/api/webhooks/WEBHOOK_ID_PMERJ"
-    },
-    PC = {
-        enterMessage = "Você entrou em serviço!",
-        exitMessage = "Você saiu de serviço!",
-        area = { centerX = -912.46, centerY = -2040.87, centerZ = 9.4, radius = 50 },  -- ['x'] = -912.46, ['y'] = -2040.87, ['z'] = 9.4  CIVIL
-        groups = {
-            ["DelegadoGeral"] = "PDelegadoGeral",
-            ["ComandanteCore"] = "PComandanteCore",
-            ["SubComandanteCore"] = "PSubComandanteCore",
-            ["Delegado"] = "PDelegado",
-            ["Core"] = "PCore",
-            ["Perito"] = "PPerito",
-            ["Escrivao"] = "PEscrivao",
-            ["Investigador"] = "PInvestigador",
-            ["Agente"] = "PAgente",
-            ["Recruta"] = "PRecruta",
-            ["PDelegadoGeral"] = "DelegadoGeral",
-            ["PComandanteCore"] = "ComandanteCore",
-            ["PSubComandanteCore"] = "SubComandanteCore",
-            ["PDelegado"] = "Delegado",
-            ["PCore"] = "Core",
-            ["PPerito"] = "Perito",
-            ["PEscrivao"] = "Escrivao",
-            ["PInvestigador"] = "Investigador",
-            ["PAgente"] = "Agente",
-            ["PRecruta"] = "Recruta"
-        },
-        webhook = "https://discord.com/api/webhooks/WEBHOOK_ID_PMERJ"
-    },
-    Hospital = {
-        enterMessage = "Você entrou em serviço!",
-        exitMessage = "Você saiu de serviço!",
-        area = { centerX = -453.38, centerY = -340.08, centerZ = 34.36, radius = 50 },  -- ['x'] = -453.38, ['y'] = -340.08, ['z'] = 34.36  HOSPITAL
-        groups = {
-            ["Diretor"] = "PDiretor",
-            ["ViceDiretor"] = "PViceDiretor",
-            ["Medico"] = "PMedico",
-            ["Enfermeiro"] = "PEnfermeiro",
-            ["Socorrista"] = "PSocorrista",
-            ["Estagiario"] = "PEstagiario",
-            ["PDiretor"] = "Diretor",
-            ["PViceDiretor"] = "ViceDiretor",
-            ["PMedico"] = "Medico",
-            ["PEnfermeiro"] = "Enfermeiro",
-            ["PSocorrista"] = "Socorrista",
-            ["PEstagiario"] = "Estagiario"
-        },
-        webhook = "https://discord.com/api/webhooks/WEBHOOK_ID_PMERJ"
-    },
-    Bombeiros = {
-        enterMessage = "Você entrou em serviço!",
-        exitMessage = "Você saiu de serviço!",
-        area = { centerX = 1548.3, centerY = 823.38, centerZ = 78.5, radius = 50 },  -- ['x'] = 1548.3, ['y'] = 823.38, ['z'] = 78.5 BOMBEIRO
-        groups = {
-            ["CoronelBombeiros"] = "PCoronelBombeiros",
-            ["MajorBombeiros"] = "PMajorBombeiros",
-            ["SargentoBombeiros"] = "PSargentoBombeiros",
-            ["TenenteBombeiros"] = "PTenenteBombeiros",
-            ["SubTenenteBombeiros"] = "PSubTenenteBombeiros",
-            ["SocorristaBombeiros"] = "PSocorristaBombeiros",
-            ["PCoronelBombeiros"] = "CoronelBombeiros",
-            ["PMajorBombeiros"] = "MajorBombeiros",
-            ["PSargentoBombeiros"] = "SargentoBombeiros",
-            ["PTenenteBombeiros"] = "TenenteBombeiros",
-            ["PSubTenenteBombeiros"] = "SubTenenteBombeiros",
-            ["PSocorristaBombeiros"] = "SocorristaBombeiros"
-        },
-        webhook = "https://discord.com/api/webhooks/WEBHOOK_ID_PMERJ"
-    },
-    Custom = {
-        enterMessage = "Você entrou em serviço!",
-        exitMessage = "Você saiu de serviço!",
-        area = { centerX = 968.43, centerY = -1021.59, centerZ = 40.84, radius = 50 },  -- ['x'] = 968.43, ['y'] = -1021.59, ['z'] = 40.84 MECANICA
-        groups = {
-            ["LiderCustom"] = "PLiderCustom",
-            ["SubLiderCustom"] = "PSubLiderCustom",
-            ["GerenteCustom"] = "PGerenteCustom",
-            ["MecanicoCustom"] = "PMecanicoCustom",
-            ["AprendizCustom"] = "PAprendizCustom",
-            ["PLiderCustom"] = "LiderCustom",
-            ["PSubLiderCustom"] = "SubLiderCustom",
-            ["PGerenteCustom"] = "GerenteCustom",
-            ["PMecanicoCustom"] = "MecanicoCustom",
-            ["PAprendizCustom"] = "AprendizCustom"
-        },
-        webhook = "https://discord.com/api/webhooks/WEBHOOK_ID_PMERJ"
-    },
-    StreetRacing = {
-        enterMessage = "Você entrou em serviço!",
-        exitMessage = "Você saiu de serviço!",        
-        area = { centerX = 768.91, centerY = -805.04, centerZ = 26.35, radius = 50 },  -- ['x'] = 768.91, ['y'] = -805.04, ['z'] = 26.35 MECANICO
-        groups = {
-            ["LiderStreetRacing"] = "PLiderStreetRacing",
-            ["SubLiderStreetRacing"] = "PSubLiderStreetRacing",
-            ["GerenteStreetRacing"] = "PGerenteStreetRacing",
-            ["MecanicoStreetRacing"] = "PMecanicoStreetRacing",
-            ["AprendizStreetRacing"] = "PAprendizStreetRacing",
-            ["PLiderStreetRacing"] = "LiderStreetRacing",
-            ["PSubLiderStreetRacing"] = "SubLiderStreetRacing",
-            ["PGerenteStreetRacing"] = "GerenteStreetRacing",
-            ["PMecanicoStreetRacing"] = "MecanicoStreetRacing",
-            ["PAprendizStreetRacing"] = "AprendizStreetRacing"
-        },
-        webhook = "https://discord.com/api/webhooks/WEBHOOK_ID_PMERJ"
-    },
+		['VANILLA'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(104.46,-1325.39,29.32), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentovanilla'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['BAHAMAS'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(-1395.75,-588.97,30.87), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentobahamas'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['BRATVA'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentobratva'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['TEQUILA'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentotequila'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['ILUMINATIS'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentoiluminatis'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['LUXURY'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentoluxury'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+
+		----------------------------------------------------------------------------------------------------
+
+		['Canada'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentocanada'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Brasil'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentobrasil'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Nigeria'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentonige'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['Colombia'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentocolombia'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['ARGENTINA'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentoargentina'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['PORTUGAL'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentoportugal'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['CV'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentocv'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['CAMORRA'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentocamorra'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['MEXICO'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentomexico'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['JAMAICA'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentojamaica'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		},
+		['AUSTRALIA'] = {
+			type = 'ilegal',  ----TYPE LEGAL\ILEGAL
+			cds = vec3(1,1,1), -----CORDENADA DA LOCALIZACAO DA PORTA DA ORG\FAC
+			permission = 'perm.recrutamentoaustralia'  ---PERMISSAO PARA MANDA O ANUNCIO "RECRUTAMENTO"
+		}
+
+
+	}
+	
 }

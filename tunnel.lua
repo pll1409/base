@@ -8,10 +8,8 @@ if IsDuplicityVersion() then
 
     RegisterTunnel = {}
     Tunnel.bindInterface(Resource, RegisterTunnel)
-    Tools = module("vrp","lib/Tools")
+
     vTunnel = Tunnel.getInterface(Resource)
-    arena = Tunnel.getInterface("mirtin_arena")
-    garage = Proxy.getInterface("thunder_garages")
 else
     vRP = Proxy.getInterface("vRP")
 
